@@ -20,9 +20,9 @@ else {
 
 // Question #1 - Where was I born?
 var answer1 = prompt('Alright ' + user + ', first question: Was I born in Washington, DC? (Yes or No)').toLowerCase();
-console.log(user + ' answered ' + answer1 + 'for Question 1');
+console.log(user + ' answered ' + answer1 + ' for Question 1');
 if (answer1 === 'yes') {
-  userPoints += 1;
+  userPoints ++;
   alert('That\'s right, ' + user + '! You now have ' + userPoints + ' point.');
 }
 else {
@@ -31,9 +31,9 @@ else {
 
 // Question #2 - How many countries/places have I visited?
 var answer2 = prompt('Okay, second question, ' + user + '. Have I traveled to more than 10 countries? (Yes or No)').toLowerCase();
-console.log(user + ' answered ' + answer2 + 'for Question 2');
+console.log(user + ' answered ' + answer2 + ' for Question 2');
 if (answer2 === 'yes') {
-  userPoints += 1;
+  userPoints ++;
   alert('Correct, ' + user + '! I\'ve been to 15 different countries! You now have ' + userPoints + ' points. Keep it up!');
 }
 else {
@@ -42,23 +42,36 @@ else {
 
 // Question #3 - My favorite food?
 var answer3 = prompt('Third question for you, ' + user + ': Are "tacos" my favorite food ? (Yes or No)').toLowerCase();
-console.log(user + ' answered ' + answer3 + 'for Question 3');
+console.log(user + ' answered ' + answer3 + ' for Question 3');
 if (answer3 === 'yes') {
   alert('Although tacos are great, ' + user + ', unfortunately they\'re not my favorite! You have ' + userPoints + ' points.');
 }
 else {
-  alert('Guess there\'s no pulling fast one on you, huh' + user + '? Spaghetti is my favorite, and you now have ' + userPoints + ' points.');
+  userPoints++;
+  alert('Guess there\'s no stumping you, huh ' + user + '? Spaghetti is my favorite, and you now have ' + userPoints + ' points.');
 }
 
 // Question #4 - What is my professional background?
 var answer4 = prompt('You made it to the fourth question, ' + user + ', you\'re doing great. Now, would you bet on me being an aerospace engineer? (Yes or No)' ).toLowerCase();
-console.log(user + ' answered ' + answer4 + 'for Question 4');
+console.log(user + ' answered ' + answer4 + ' for Question 4');
 if (answer4 === 'yes') {
-  userPoints += 1;
+  userPoints ++;
   alert('You got it, ' + user + '! Thanks for believing in me...you\'ve got ' + userPoints + ' points!');
 }
 else {
   alert('Aww, c\'mon ' + user + '! Why didn\'t you bet on me?!...Points: ' + userPoints);
 }
 
-// Question #5 - Fun/inconspicuous fact about me
+// Question #5 - Fun or inconspicuous fact about me
+var answer5 = prompt('Final question, ' + user + '! Did I ever play keyboard in a band? (Yes or No)').toLowerCase();
+console.log(user + ' answered ' + answer5 + ' for Question 5');
+if (answer5 === 'yes') {
+  userPoints++;
+  alert('That\'s right, ' + user + ', nice job! You scored a total of ' + userPoints + ' points.');
+}
+else {
+  alert('Sorry, ' + user + ' that\'s wrong. Great try though! You scored a total of ' + userPoints + ' points.');
+}
+
+// thank user; end guessing game
+alert('Thanks for playing and visiting my page, ' + user + '!');
