@@ -34,7 +34,7 @@ var answer2 = prompt('Okay, second question ' + user + '. Have I traveled to mor
 console.log(user + ' answered ' + answer2 + ' for Question 2');
 if (answer2 === 'yes') {
   userPoints ++;
-  alert('Correct ' + user + '! I\'ve been to 15 different countries! You now have ' + userPoints + ' points. Keep it up!');
+  alert('Correct, ' + user + '! I\'ve been to 15 different countries! You now have ' + userPoints + ' points. Keep it up!');
 }
 else {
   alert('Nope! That\'s incorrect! You currently have ' + userPoints + ' points, but don\'t give up now ' + user + '!');

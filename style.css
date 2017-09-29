@@ -11,7 +11,7 @@ header {
 h1 {
   text-align: center;
   font-weight: bold;
-  font-size: 30;
+  font-size: 40px;
   font-style: italic;
   font-family: "Lucida Bright";
 }
@@ -27,8 +27,8 @@ figure {
 
 img {
   border: 1px solid #000000;
-  display: block;
-  margin: auto; /* centers image within figure element and on page */
+  display: block; /* treat img as block element to center */
+  margin: auto; /* centers image within figure element and page */
 }
 
 section {
@@ -40,8 +40,12 @@ article p {
 }
 
 ul {
-  margin: auto; /* centers list within section and on page */
-  width: 30%; /* width of list as a percentage of containing section*/
+  margin: auto; /* centers list within section and page */
+  width: 30%; /* width of list as a percentage of article*/
+}
+
+li {
+  margin: auto;
 }
 
 footer {
