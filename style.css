@@ -6,7 +6,17 @@ body {
 
 h1 {
   text-align: center;
-  color: #000000;
   font-weight: bold;
   font-size: 24;
+  font-style: italic;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  font-weight: bold;
 }
