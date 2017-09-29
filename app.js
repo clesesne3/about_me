@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 // create & initialize variable to track user points
 var userPoints = 0;
 
@@ -74,4 +74,4 @@ else {
 }
 
 // thank user; end guessing game
-alert('Thanks for playing and visiting my page ' + user + '!');
+alert('Thanks for playing and visiting my page ' + user + '!');*/
