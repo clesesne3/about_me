@@ -5,14 +5,15 @@ body {
 }
 
 header {
-
+  border-bottom: 3px solid #FFFFFF;
 }
 
 h1 {
   text-align: center;
   font-weight: bold;
-  font-size: 24;
+  font-size: 30;
   font-style: italic;
+  font-family: "Lucida Bright";
 }
 
 h2 {
@@ -21,15 +22,35 @@ h2 {
 }
 
 figure {
-  text-align: center;
+
 }
 
 img {
+  border: 1px solid #000000;
   display: block;
-  margin: auto;
+  margin: auto; /* centers image within figure element and on page */
+}
+
+section {
+
+}
+
+article p {
+  text-align: center;
+}
+
+ul {
+  margin: auto; /* centers list within section and on page */
+  width: 30%; /* width of list as a percentage of containing section*/
 }
 
 footer {
   text-align: center;
   font-weight: bold;
+  font-style: italic;
+  border-top: 3px solid #FFFFFF;
+}
+
+footer p {
+  height: 10%; /* height of text in footer */
 }
