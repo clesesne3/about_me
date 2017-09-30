@@ -17,7 +17,7 @@ if (startGame === 'yes') {
 else {
   alert('Sorry to hear that ' + user + '. But, unfortunately, you still have to play...enjoy :-)');
 }
-
+/*
 // Question #1 - Where was I born?
 var answer1 = prompt('Alright ' + user + ', first question: Was I born in Washington, DC? (Yes or No)').toLowerCase();
 console.log(user + ' answered ' + answer1 + ' for Question 1');
@@ -63,15 +63,37 @@ else {
 }
 
 // Question #5 - Fun or inconspicuous fact about me
-var answer5 = prompt('Final question ' + user + '! Did I ever play keyboard in a band? (Yes or No)').toLowerCase();
+var answer5 = prompt('Hey ' + user + '! Did I ever play keyboard in a band? (Yes or No)').toLowerCase();
 console.log(user + ' answered ' + answer5 + ' for Question 5');
 if (answer5 === 'yes') {
   userPoints++;
-  alert('That\'s right ' + user + '! Nice job! You scored a total of ' + userPoints + ' points.');
+  alert('That\'s right ' + user + '! Nice job! You currently have ' + userPoints + ' points.');
 }
 else {
   alert('Sorry ' + user + ', that\'s wrong. Great try though! You scored a total of ' + userPoints + ' points.');
 }
+*/
+//Question #6 - Guess the number I am thinking of!(Generate random number; user will have four attempts)
+var guessNum = Math.floor((Math.random() * 10) + 1); // creates random integer between 1 and 10 inclusively
+var answer6 = prompt('Okay ' + user + ', I\'m thinking of a number between 1 and 10...can you guess which number? (Enter integer between 1 and 20)');
+console.log(user + ' answered ' + answer6 + ' for Question 6');
+var numTries = 0; //initialize counter for number of user guesses
+var maxTries = 4;
+if (answer6 === guessNum) {
+  userPoints++;
+  alert('Wow! Way to go, ' + user + '! You read my mind! You have ' + userPoints + ' points.');
+}
+else {
+  while (numTries < 3) {
+    numTries++;
+    var remainingTries = maxTries - numTries;
+    alert('Nope, guess again ' + user + '! You still have ' + remainingTries + ' left.');
+    answer6 = prompt('Number between 1 and 20? (Enter integer between 1 and 20):\n Tries left: ' + remainingTries);
+  }
+  alert('Don\'t beat yourself up about it, ' + user + ' :-) On to the final question!');
+}
+
+//Question #7 - Guess one of my favorite countries to visit
 
 // thank user; end guessing game
 alert('Thanks for playing and visiting my page ' + user + '!');

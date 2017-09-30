@@ -15,9 +15,10 @@ header {
 h1 {
   text-align: center;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 52px;
   font-style: italic;
-  font-family: Palatino;
+  font-family: 'Tangerine';
+  text-shadow: 2px 2px gray;
 }
 
 h3 {
@@ -26,10 +27,27 @@ h3 {
   font-family: fantasy;
 }
 
+figure {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+}
+
 img {
   display: block; /* treat img as block element to center */
-  width: 25%; /* set width of image relative to containing figure element*/
+  width: 45%; /* set width of image relative to containing figure element*/
   margin: auto; /* centers image within figure element and page */
+}
+
+article {
+  border: 1px solid #000000;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 32%;
+  font-family: 'Roboto';
 }
 
 article p {
@@ -38,16 +56,21 @@ article p {
 
 .bio {
   margin: auto; /* centers article element with 'bio' class */
-  width: 45%; /* reduces width of paragraph in 'bio' article */
+  width: 50%; /* reduces width of article element with 'bio' class */
 }
 
 #bio_p {
   text-align: center; /* centers paragraph text*/
+  padding: 2%;
+}
+
+#experience {
+  padding: 2%;
 }
 
 ul {
   margin: auto; /* centers list within section and page */
-  width: 30%; /* width of list as a percentage of article*/
+  width: 80%; /* width of list as a percentage of article*/
 }
 
 footer {
