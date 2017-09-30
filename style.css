@@ -4,8 +4,12 @@ body {
   background-repeat: no-repeat;
 }
 
+#page{
+  border: 2px solid #FFFFFF;
+}
+
 header {
-  border-bottom: 3px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF; /* place border only along bottom of header*/
 }
 
 h1 {
@@ -16,27 +20,28 @@ h1 {
   font-family: "Lucida Bright";
 }
 
-h2 {
+h3 {
   text-align: center;
   font-weight: bold;
 }
 
-figure {
-
-}
-
 img {
-  border: 1px solid #000000;
   display: block; /* treat img as block element to center */
+  width: 25%; /* set width of image relative to containing figure element*/
   margin: auto; /* centers image within figure element and page */
-}
-
-section {
-
 }
 
 article p {
   text-align: center;
+}
+
+.bio {
+  margin: auto; /* centers article element with 'bio' class */
+  width: 45%; /* reduces width of paragraph in 'bio' article */
+}
+
+#bio_p {
+  text-align: center; /* centers paragraph text*/
 }
 
 ul {
@@ -44,15 +49,11 @@ ul {
   width: 30%; /* width of list as a percentage of article*/
 }
 
-li {
-  margin: auto;
-}
-
 footer {
   text-align: center;
   font-weight: bold;
   font-style: italic;
-  border-top: 3px solid #FFFFFF;
+  border-top: 3px solid #FFFFFF; /* place border only along top of footer*/
 }
 
 footer p {
