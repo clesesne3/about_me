@@ -75,28 +75,36 @@ else {
 
 //Question #6 - Guess the number I am thinking of!(Generate random number; user will have four attempts)
 var guessNum = Math.floor((Math.random() * 10) + 1); // creates random integer between 1 and 10 inclusively
-var answer6 = prompt('Okay ' + user + ', I\'m thinking of a number between 1 and 10...can you guess which number? (Enter integer between 1 and 10)');
+var answer6 = parseInt(prompt('Okay ' + user + ', I\'m thinking of a number between 1 and 10...can you guess which number? (Enter integer between 1 and 10)')); //converts user's number response to an integer
+
 console.log(user + ' answered ' + answer6 + ' for Question 6');
 var numTries = 0; //initialize counter for number of user guesses
 var maxTries = 4;
-if (answer6 === guessNum) {
-  userPoints++;
-  alert('Wow! Way to go, ' + user + '! You read my mind! You have ' + userPoints + ' points.');
+
+// user must enter an integer to continue guessing
+while (isNaN(parseInt(answer6))) {
+  alert('You must enter an integer!');
 }
-else if (Number.isInteger(answer6) === false) {
-  alert('You have to enter an integer!');
-  answer6 = prompt('Number between 1 and 20? (Enter integer between 1 and 20):');
-}
-else {
-  while (numTries < 3) {
+
+while (numTries < 3) {
+  if (answer6 === guessNum) {
+    userPoints++;
+    alert('Wow! Way to go, ' + user + '! You read my mind! You have ' + userPoints + ' points.');
+    break;
+  }
+
+  else {
     numTries++;
     var remainingTries = maxTries - numTries;
     alert('Nope, guess again ' + user + '! You still have ' + remainingTries + ' left.');
     answer6 = prompt('Number between 1 and 10? (Enter integer between 1 and 10):\n Tries left: ' + remainingTries);
   }
-  alert('Don\'t beat yourself up about it, ' + user + ' :-) On to the final question!');
 }
 
+if (numTries === 3) {
+  alert('Don\'t beat yourself up about it, ' + user + ' :-) On to the final question!');
+}
+/*
 //Question #7 - Guess one of my favorite countries to visit
 var answer7 = prompt('You\'ve made it to the final question, ' + user + '. Ready? Can you guess one of the many countries I\'ve explored? (Don\'t forget, countries are proper nouns...be sure to capitalize that first letter!)');
 console.log(user + ' answered ' + answer7 + ' for Question 7');
@@ -134,7 +142,7 @@ while(numAttempts < 5) {
     alert('Nope, great place, but that one wasn\'t on the list. Try again!');
     answer7 = prompt('Guess another country: \n Tries Left: ' + remainingAttempts);
   }
-}
+}*/
 
 // thank user; end guessing game
 alert('Thanks for playing and visiting my page ' + user + '!');
