@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 // create & initialize variable to track user points
 var userPoints = 0;
 
@@ -17,7 +17,7 @@ if (startGame === 'yes') {
 else {
   alert('Sorry to hear that ' + user + '. But, unfortunately, you still have to play...enjoy :-)');
 }
-/*
+
 // Question #1 - Where was I born?
 var answer1 = prompt('Alright ' + user + ', first question: Was I born in Washington, DC? (Yes or No)').toLowerCase();
 console.log(user + ' answered ' + answer1 + ' for Question 1');
@@ -71,21 +71,22 @@ if (answer5 === 'yes') {
 }
 else {
   alert('Sorry ' + user + ', that\'s wrong. Great try though! You scored a total of ' + userPoints + ' points.');
-}*/
+}
 
 //Question #6 - Guess the number I am thinking of!(Generate random number; user will have four attempts)
-var guessNum = Math.floor((Math.random() * 10) + 1); // creates random integer between 1 and 10 inclusively
-var answer6 = parseInt(prompt('Okay ' + user + ', I\'m thinking of a number between 1 and 10...can you guess which number? (Enter integer between 1 and 10)')); //converts user's number response to an integer
+var guessNum = Math.floor((Math.random() * 5) + 1); // creates random integer between 1 and 5 inclusively
+var answer6 = parseInt(prompt('Okay ' + user + ', I\'m thinking of a number between 1 and 5...can you guess which number? (Enter integer between 1 and 5)')); //converts user's number response to an integer
 
 console.log(user + ' answered ' + answer6 + ' for Question 6');
 var numTries = 0; //initialize counter for number of user guesses
-var maxTries = 4;
+var maxTries = 4; //set maximum number of user guesses
 
 // user must enter an integer to continue guessing
 while (isNaN(parseInt(answer6))) {
   alert('You must enter an integer!');
 }
 
+// give user 3 attempts to guess number
 while (numTries < 3) {
   if (answer6 === guessNum) {
     userPoints++;
@@ -97,14 +98,14 @@ while (numTries < 3) {
     numTries++;
     var remainingTries = maxTries - numTries;
     alert('Nope, guess again ' + user + '! You still have ' + remainingTries + ' left.');
-    answer6 = prompt('Number between 1 and 10? (Enter integer between 1 and 10):\n Tries left: ' + remainingTries);
+    answer6 = prompt('Number between 1 and 5? (Enter integer between 1 and 5):\n Tries left: ' + remainingTries);
   }
 }
 
 if (numTries === 3) {
   alert('Don\'t beat yourself up about it, ' + user + ' :-) On to the final question!');
 }
-/*
+
 //Question #7 - Guess one of my favorite countries to visit
 var answer7 = prompt('You\'ve made it to the final question, ' + user + '. Ready? Can you guess one of the many countries I\'ve explored? (Don\'t forget, countries are proper nouns...be sure to capitalize that first letter!)');
 console.log(user + ' answered ' + answer7 + ' for Question 7');
@@ -142,7 +143,7 @@ while(numAttempts < 5) {
     alert('Nope, great place, but that one wasn\'t on the list. Try again!');
     answer7 = prompt('Guess another country: \n Tries Left: ' + remainingAttempts);
   }
-}*/
+}
 
 // thank user; end guessing game
-alert('Thanks for playing and visiting my page ' + user + '!');
+alert('Thanks for playing and visiting my page ' + user + '!');*/

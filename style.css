@@ -9,7 +9,17 @@ body {
 }
 
 header {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: sticky; /* allows content to scroll with header still visible, lines 15-16*/
+  top: 0;
+  padding: 5px;
+  background-image: url('https://ak9.picdn.net/shutterstock/videos/20765329/thumb/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   border-bottom: 2px solid #FFFFFF; /* place border only along bottom of header*/
+  z-index: 999;
 }
 
 h1 {
@@ -17,8 +27,9 @@ h1 {
   font-weight: bold;
   font-size: 52px;
   font-style: italic;
-  font-family: 'Tangerine';
+  font-family: 'Merriweather';
   text-shadow: 2px 2px gray;
+  z-index: 100;
 }
 
 h3 {
@@ -28,7 +39,7 @@ h3 {
 }
 
 figure {
-  width: 60%;
+  width: 30%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2%;
@@ -36,8 +47,9 @@ figure {
 
 img {
   display: block; /* treat img as block element to center */
-  width: 45%; /* set width of image relative to containing figure element*/
+  width: 100%; /* set width of image relative to containing figure element*/
   margin: auto; /* centers image within figure element and page */
+  z-index: 0;
 }
 
 article {
@@ -48,6 +60,7 @@ article {
   margin-bottom: 2%;
   width: 32%;
   font-family: 'Roboto';
+  z-index: 0;
 }
 
 article p {
