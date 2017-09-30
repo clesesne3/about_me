@@ -5,11 +5,11 @@ body {
 }
 
 #page{
-  border: 2px solid #FFFFFF;
+  border: 6px solid #FFFFFF;
 }
 
 header {
-  border-bottom: 3px solid #FFFFFF; /* place border only along bottom of header*/
+  border-bottom: 2px solid #FFFFFF; /* place border only along bottom of header*/
 }
 
 h1 {
@@ -17,12 +17,13 @@ h1 {
   font-weight: bold;
   font-size: 40px;
   font-style: italic;
-  font-family: "Lucida Bright";
+  font-family: Palatino;
 }
 
 h3 {
   text-align: center;
   font-weight: bold;
+  font-family: fantasy;
 }
 
 img {
@@ -53,7 +54,7 @@ footer {
   text-align: center;
   font-weight: bold;
   font-style: italic;
-  border-top: 3px solid #FFFFFF; /* place border only along top of footer*/
+  border-top: 2px solid #FFFFFF; /* place border only along top of footer*/
 }
 
 footer p {
