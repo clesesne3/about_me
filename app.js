@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 // create & initialize variable to track user points
 var userPoints = 0;
 
@@ -145,5 +145,9 @@ while(numAttempts < 5) {
   }
 }
 
+if (numAttempts === 5) {
+  alert('You scored ' + userPoints + ' out of 7 points!');
+}
+
 // thank user; end guessing game
-alert('Thanks for playing and visiting my page ' + user + '!');*/
+alert('Thanks for playing and visiting my page ' + user + '!');

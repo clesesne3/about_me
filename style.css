@@ -12,14 +12,14 @@ header {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  position: sticky; /* allows content to scroll with header still visible, lines 15-16*/
-  top: 0;
+  /*position: sticky; /* allows content to scroll with header still visible, lines 15-16
+  top: 0;*/
   padding: 5px;
-  background-image: url('https://ak9.picdn.net/shutterstock/videos/20765329/thumb/1.jpg');
+  /*background-image: url('https://ak9.picdn.net/shutterstock/videos/20765329/thumb/1.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
   border-bottom: 2px solid #FFFFFF; /* place border only along bottom of header*/
-  z-index: 999;
+  /*z-index: 999;*/
 }
 
 h1 {
@@ -35,7 +35,7 @@ h1 {
 h3 {
   text-align: center;
   font-weight: bold;
-  font-family: fantasy;
+  font-family: 'Roboto';
 }
 
 figure {
