@@ -10,9 +10,9 @@ body {
 }
 
 header {
-  width: 50%;
-  /*position: sticky; /* allows content to scroll with header still visible, lines 15-16
-  top: 0;*/
+  width: 40%;
+  position: sticky; /* allows content to scroll with header still visible, lines 15-16*/
+  top: 0;
   margin-right: auto;
   padding: 5px;
   /*background-image: url('https://ak9.picdn.net/shutterstock/videos/20765329/thumb/1.jpg');
@@ -24,13 +24,15 @@ header {
 
 h1 {
   text-align: left;
-  font-weight: bold;
-  font-size: 52px;
+  font-weight: normal;
+  font-size: 48px;
   font-style: italic;
-  font-family: 'Merriweather';
+  font-family: 'Muli';
   text-shadow: 2px 2px gray;
   color: #FFF;
   z-index: 100;
+  border: 1px double #FFF;
+  border-radius: 10px;
 }
 
 h3 {
