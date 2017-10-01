@@ -1,66 +1,67 @@
 body {
-  background-image: url('https://ak9.picdn.net/shutterstock/videos/20765329/thumb/1.jpg');
-  background-size: cover;
+  /*background-image: url('https://ak9.picdn.net/shutterstock/videos/20765329/thumb/1.jpg');*/
+  background-image: url('https://www.kennedyspacecenter.com/-/media/DNC/KSCVC/See-a-Launch/Media-Gallery/SpaceX-Thaicom-8.ashx');
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
 #page{
-  border: 6px solid #FFFFFF;
+
 }
 
 header {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 50%;
   /*position: sticky; /* allows content to scroll with header still visible, lines 15-16
   top: 0;*/
+  margin-right: auto;
   padding: 5px;
   /*background-image: url('https://ak9.picdn.net/shutterstock/videos/20765329/thumb/1.jpg');
   background-repeat: no-repeat;
   background-size: cover;*/
-  border-bottom: 2px solid #FFFFFF; /* place border only along bottom of header*/
+  /*border-bottom: 2px solid #FFF; /* place border only along bottom of header*/
   /*z-index: 999;*/
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
   font-weight: bold;
   font-size: 52px;
   font-style: italic;
   font-family: 'Merriweather';
   text-shadow: 2px 2px gray;
+  color: #FFF;
   z-index: 100;
 }
 
 h3 {
   text-align: center;
   font-weight: bold;
-  font-family: 'Roboto';
+  font-family: fantasy;
 }
 
-figure {
+/*figure {
   width: 30%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2%;
-}
+}*/
 
-img {
-  display: block; /* treat img as block element to center */
-  width: 100%; /* set width of image relative to containing figure element*/
-  margin: auto; /* centers image within figure element and page */
+/*img {
+  display: block; /* treat img as block element to center
+  width: 100%; /* set width of image relative to containing figure element
+  margin: auto; /* centers image within figure element and page
   z-index: 0;
-}
+}*/
 
 article {
-  border: 1px solid #000000;
+  border: 1px solid #FFF;
   margin-left: auto;
-  margin-right: auto;
+  /*margin-right: auto;*/
   margin-top: 2%;
   margin-bottom: 2%;
   width: 32%;
   font-family: 'Roboto';
-  z-index: 0;
+  color: #FFF;
 }
 
 article p {
@@ -68,8 +69,8 @@ article p {
 }
 
 .bio {
-  margin: auto; /* centers article element with 'bio' class */
-  width: 50%; /* reduces width of article element with 'bio' class */
+  /*margin: auto; /* centers article element with 'bio' class */
+  width: 30%; /* reduces width of article element with 'bio' class */
 }
 
 #bio_p {
@@ -90,7 +91,8 @@ footer {
   text-align: center;
   font-weight: bold;
   font-style: italic;
-  border-top: 2px solid #FFFFFF; /* place border only along top of footer*/
+  color: #FFF;
+  /*border-top: 2px solid #FFF; /* place border only along top of footer*/
 }
 
 footer p {
