@@ -1,0 +1,102 @@
+body {
+  /*background-image: url('https://ak9.picdn.net/shutterstock/videos/20765329/thumb/1.jpg');*/
+  background-image: url('https://www.kennedyspacecenter.com/-/media/DNC/KSCVC/See-a-Launch/Media-Gallery/SpaceX-Thaicom-8.ashx');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#page{
+
+}
+
+header {
+  width: 40%;
+  position: sticky; /* allows content to scroll with header still visible, lines 15-16*/
+  top: 0;
+  margin-right: auto;
+  padding: 5px;
+  /*background-image: url('https://ak9.picdn.net/shutterstock/videos/20765329/thumb/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;*/
+  /*border-bottom: 2px solid #FFF; /* place border only along bottom of header*/
+  /*z-index: 999;*/
+}
+
+h1 {
+  text-align: left;
+  font-weight: normal;
+  font-size: 48px;
+  font-style: italic;
+  font-family: 'Muli';
+  text-shadow: 2px 2px gray;
+  color: #FFF;
+  z-index: 100;
+  border: 1px double #FFF;
+  border-radius: 10px;
+}
+
+h3 {
+  text-align: center;
+  font-weight: bold;
+  font-family: fantasy;
+}
+
+/*figure {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+}*/
+
+/*img {
+  display: block; /* treat img as block element to center
+  width: 100%; /* set width of image relative to containing figure element
+  margin: auto; /* centers image within figure element and page
+  z-index: 0;
+}*/
+
+article {
+  border: 1px solid #FFF;
+  margin-left: auto;
+  /*margin-right: auto;*/
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 32%;
+  font-family: 'Roboto';
+  color: #FFF;
+}
+
+article p {
+  text-align: center;
+}
+
+.bio {
+  /*margin: auto; /* centers article element with 'bio' class */
+  width: 30%; /* reduces width of article element with 'bio' class */
+}
+
+#bio_p {
+  text-align: center; /* centers paragraph text*/
+  padding: 2%;
+}
+
+#experience {
+  padding: 2%;
+}
+
+ul {
+  margin: auto; /* centers list within section and page */
+  width: 80%; /* width of list as a percentage of article*/
+}
+
+footer {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: #FFF;
+  /*border-top: 2px solid #FFF; /* place border only along top of footer*/
+}
+
+footer p {
+  height: 10%; /* height of text in footer */
+}
