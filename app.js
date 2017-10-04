@@ -62,17 +62,20 @@ function askFaveFood(){
   }
 }
 askFaveFood();
-// Question #4 - What is my professional background?
-var answer4 = prompt('You made it to the fourth question ' + user + '...you\'re doing great. Now, would you bet on me being an aerospace engineer? (Yes or No)' ).toLowerCase();
-console.log(user + ' answered ' + answer4 + ' for Question 4');
-if (answer4 === 'yes') {
-  userPoints ++;
-  alert('You got it, ' + user + '! Thanks for believing in me...you\'ve got ' + userPoints + ' points!');
-}
-else {
-  alert('Aww, c\'mon ' + user + '! Why didn\'t you bet on me?!...Points: ' + userPoints);
-}
 
+function askProfession(){
+// Question #4 - What is my professional background?
+  var answer4 = prompt('You made it to the fourth question ' + user + '...you\'re doing great. Now, would you bet on me being an aerospace engineer? (Yes or No)' ).toLowerCase();
+  console.log(user + ' answered ' + answer4 + ' for Question 4');
+  if (answer4 === 'yes') {
+    userPoints ++;
+    alert('You got it, ' + user + '! Thanks for believing in me...you\'ve got ' + userPoints + ' points!');
+  }
+  else {
+    alert('Aww, c\'mon ' + user + '! Why didn\'t you bet on me?!...Points: ' + userPoints);
+  }
+}
+askProfession();
 // Question #5 - Fun or inconspicuous fact about me
 var answer5 = prompt('Hey ' + user + '! Did I ever play keyboard in a band? (Yes or No)').toLowerCase();
 console.log(user + ' answered ' + answer5 + ' for Question 5');
