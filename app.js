@@ -48,17 +48,20 @@ function howManyCountries(){
   }
 }
 howManyCountries();
-// Question #3 - My favorite food?
-var answer3 = prompt('Third question for you ' + user + ': Are "tacos" my favorite food ? (Yes or No)').toLowerCase();
-console.log(user + ' answered ' + answer3 + ' for Question 3');
-if (answer3 === 'yes') {
-  alert('Although tacos are great ' + user + ', unfortunately, they\'re not my favorite! You have ' + userPoints + ' points.');
-}
-else {
-  userPoints++;
-  alert('Guess there\'s no stumping you, huh ' + user + '? Spaghetti is my favorite, and you now have ' + userPoints + ' points.');
-}
 
+function askFaveFood(){
+// Question #3 - My favorite food?
+  var answer3 = prompt('Third question for you ' + user + ': Are "tacos" my favorite food ? (Yes or No)').toLowerCase();
+  console.log(user + ' answered ' + answer3 + ' for Question 3');
+  if (answer3 === 'yes') {
+    alert('Although tacos are great ' + user + ', unfortunately, they\'re not my favorite! You have ' + userPoints + ' points.');
+  }
+  else {
+    userPoints++;
+    alert('Guess there\'s no stumping you, huh ' + user + '? Spaghetti is my favorite, and you now have ' + userPoints + ' points.');
+  }
+}
+askFaveFood();
 // Question #4 - What is my professional background?
 var answer4 = prompt('You made it to the fourth question ' + user + '...you\'re doing great. Now, would you bet on me being an aerospace engineer? (Yes or No)' ).toLowerCase();
 console.log(user + ' answered ' + answer4 + ' for Question 4');
