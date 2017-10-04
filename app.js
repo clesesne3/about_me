@@ -3,21 +3,23 @@
 // create & initialize variable to track user points
 var userPoints = 0;
 
+function funcQuestion0(){
 // greet user and ask for their name
-var user = prompt('Welcome to my profile! What\'s your name?');
-console.log('The user\'s name is ' + user);
-alert('Hi, ' + user + '! I\'m glad you\'re here to checkout my page!');
+  var user = prompt('Welcome to my profile! What\'s your name?');
+  console.log('The user\'s name is ' + user);
+  alert('Hi, ' + user + '! I\'m glad you\'re here to checkout my page!');
 
-// ask if user wants to play guessing game
-var startGame = prompt('If you\'re interested in learning more about me, how about a quick game? (Yes or No)').toLowerCase();
-console.log(user + 'answered ' + startGame);
-if (startGame === 'yes') {
-  alert('Awesome, ' + user + '! Let\'s get started!');
+  // ask if user wants to play guessing game
+  var startGame = prompt('If you\'re interested in learning more about me, how about a quick game? (Yes or No)').toLowerCase();
+  console.log(user + 'answered ' + startGame);
+  if (startGame === 'yes') {
+    alert('Awesome, ' + user + '! Let\'s get started!');
+  }
+  else {
+    alert('Sorry to hear that ' + user + '. But, unfortunately, you still have to play...enjoy :-)');
+  }
 }
-else {
-  alert('Sorry to hear that ' + user + '. But, unfortunately, you still have to play...enjoy :-)');
-}
-
+funcQuestion0();
 // Question #1 - Where was I born?
 var answer1 = prompt('Alright ' + user + ', first question: Was I born in Washington, DC? (Yes or No)').toLowerCase();
 console.log(user + ' answered ' + answer1 + ' for Question 1');
