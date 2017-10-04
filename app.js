@@ -127,49 +127,53 @@ function guessNumber(){
 }
 guessNumber();
 
+function guessWhichCountry() {
+
 //Question #7 - Guess one of my favorite countries to visit
-var answer7 = prompt('You\'ve made it to the final question, ' + user + '. Ready? Can you guess one of the many countries I\'ve explored?');
-console.log(user + ' answered ' + answer7 + ' for Question 7');
-var countryArray = ['South Africa', 'China', 'Jamaica', 'Dubai', 'France', 'Germany', 'England', 'Luxembourg'];
-var numAttempts = 0; // initialize counter for number of user guesses
-var maxAttempts = 6; // maximum number of user guesses
-var guessCorrect = false;
+  var answer7 = prompt('You\'ve made it to the final question, ' + user + '. Ready? Can you guess one of the many countries I\'ve explored?');
+  console.log(user + ' answered ' + answer7 + ' for Question 7');
+  var countryArray = ['South Africa', 'China', 'Jamaica', 'Dubai', 'France', 'Germany', 'England', 'Luxembourg'];
+  var numAttempts = 0; // initialize counter for number of user guesses
+  var maxAttempts = 6; // maximum number of user guesses
+  var guessCorrect = false;
 
-while(numAttempts < 5) {
-  // loop through array of countries to check user's answer against all array items
-  for (var i = 0; i < countryArray.length; i++) {
-    // convert user's guess to lower case
-    if (answer7.toLowerCase() === countryArray[i].toLowerCase()) {
-      userPoints++;
-      alert('Awesome, you got it, ' + user + '! ' + answer7 + ' is an amazing place!');
-      alert('You scored ' + userPoints + ' out of 7 points, ' + user + '!');
-      guessCorrect = true; //Boolean value to confirm correct user guess
-      break; // break out of for loop if user guesses correctly
+  while(numAttempts < 5) {
+    // loop through array of countries to check user's answer against all array items
+    for (var i = 0; i < countryArray.length; i++) {
+      // convert user's guess to lower case
+      if (answer7.toLowerCase() === countryArray[i].toLowerCase()) {
+        userPoints++;
+        alert('Awesome, you got it, ' + user + '! ' + answer7 + ' is an amazing place!');
+        alert('You scored ' + userPoints + ' out of 7 points, ' + user + '!');
+        guessCorrect = true; //Boolean value to confirm correct user guess
+        break; // break out of for loop if user guesses correctly
+      }
+
+      else {
+        guessCorrect = false;
+        continue;
+      }
     }
 
+    // break out of while loop if user guesses correctly
+    if (guessCorrect === true) {
+      break;
+    }
+
+    // give user 5 more attempts if initial guess is incorrect
     else {
-      guessCorrect = false;
-      continue;
+      numAttempts++;
+      var remainingAttempts = maxAttempts - numAttempts;
+      alert('Nope, great place, but that one wasn\'t on the list. Try again!');
+      answer7 = prompt('Guess another country: \n Tries Left: ' + remainingAttempts);
     }
   }
 
-  // break out of while loop if user guesses correctly
-  if (guessCorrect === true) {
-    break;
-  }
-
-  // give user 5 more attempts if initial guess is incorrect
-  else {
-    numAttempts++;
-    var remainingAttempts = maxAttempts - numAttempts;
-    alert('Nope, great place, but that one wasn\'t on the list. Try again!');
-    answer7 = prompt('Guess another country: \n Tries Left: ' + remainingAttempts);
+  if (numAttempts === 5) {
+    alert('You scored ' + userPoints + ' out of 7 points!');
   }
 }
-
-if (numAttempts === 5) {
-  alert('You scored ' + userPoints + ' out of 7 points!');
-}
+guessWhichCountry();
 
 // thank user; end guessing game
 alert('Thanks for playing and visiting my page ' + user + '!');
