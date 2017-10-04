@@ -34,17 +34,20 @@ function askBirthPlace(){
   }
 }
 askBirthPlace();
-// Question #2 - How many countries/places have I visited?
-var answer2 = prompt('Okay, second question ' + user + '. Have I traveled to more than 10 countries? (Yes or No)').toLowerCase();
-console.log(user + ' answered ' + answer2 + ' for Question 2');
-if (answer2 === 'yes') {
-  userPoints ++;
-  alert('Correct, ' + user + '! I\'ve been to 15 different countries! You now have ' + userPoints + ' points. Keep it up!');
-}
-else {
-  alert('Nope! That\'s incorrect! You currently have ' + userPoints + ' points, but don\'t give up now ' + user + '!');
-}
 
+function howManyCountries(){
+// Question #2 - How many countries/places have I visited?
+  var answer2 = prompt('Okay, second question ' + user + '. Have I traveled to more than 10 countries? (Yes or No)').toLowerCase();
+  console.log(user + ' answered ' + answer2 + ' for Question 2');
+  if (answer2 === 'yes') {
+    userPoints ++;
+    alert('Correct, ' + user + '! I\'ve been to 15 different countries! You now have ' + userPoints + ' points. Keep it up!');
+  }
+  else {
+    alert('Nope! That\'s incorrect! You currently have ' + userPoints + ' points, but don\'t give up now ' + user + '!');
+  }
+}
+howManyCountries();
 // Question #3 - My favorite food?
 var answer3 = prompt('Third question for you ' + user + ': Are "tacos" my favorite food ? (Yes or No)').toLowerCase();
 console.log(user + ' answered ' + answer3 + ' for Question 3');
