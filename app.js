@@ -91,38 +91,41 @@ function askFunFact(){
 }
 askFunFact();
 
+function guessNumber(){
 //Question #6 - Guess the number I am thinking of!(Generate random number; user will have four attempts)
-var guessNum = Math.floor((Math.random() * 5) + 1); // creates random integer between 1 and 5 inclusively
-var answer6 = parseInt(prompt('Okay ' + user + ', I\'m thinking of a number between 1 and 5...can you guess which number? (Enter integer between 1 and 5)')); //converts user's number response to an integer
+  var guessNum = Math.floor((Math.random() * 5) + 1); // creates random integer between 1 and 5 inclusively
+  var answer6 = parseInt(prompt('Okay ' + user + ', I\'m thinking of a number between 1 and 5...can you guess which number? (Enter integer between 1 and 5)')); //converts user's number response to an integer
 
-console.log(user + ' answered ' + answer6 + ' for Question 6');
-var numTries = 0; //initialize counter for number of user guesses
-var maxTries = 4; //set maximum number of user guesses
+  console.log(user + ' answered ' + answer6 + ' for Question 6');
+  var numTries = 0; //initialize counter for number of user guesses
+  var maxTries = 4; //set maximum number of user guesses
 
-// user must enter an integer to continue guessing
-while (isNaN(parseInt(answer6))) {
-  alert('You must enter an integer!');
-}
-
-// give user 3 attempts to guess number
-while (numTries < 3) {
-  if (answer6 === guessNum) {
-    userPoints++;
-    alert('Wow! Way to go, ' + user + '! You read my mind! You have ' + userPoints + ' points.');
-    break;
+  // user must enter an integer to continue guessing
+  while (isNaN(parseInt(answer6))) {
+    alert('You must enter an integer!');
   }
 
-  else {
-    numTries++;
-    var remainingTries = maxTries - numTries;
-    alert('Nope, guess again ' + user + '! You still have ' + remainingTries + ' left.');
-    answer6 = prompt('Number between 1 and 5? (Enter integer between 1 and 5):\n Tries left: ' + remainingTries);
+  // give user 3 attempts to guess number
+  while (numTries < 3) {
+    if (answer6 === guessNum) {
+      userPoints++;
+      alert('Wow! Way to go, ' + user + '! You read my mind! You have ' + userPoints + ' points.');
+      break;
+    }
+
+    else {
+      numTries++;
+      var remainingTries = maxTries - numTries;
+      alert('Nope, guess again ' + user + '! You still have ' + remainingTries + ' left.');
+      answer6 = prompt('Number between 1 and 5? (Enter integer between 1 and 5):\n Tries left: ' + remainingTries);
+    }
+  }
+
+  if (numTries === 3) {
+    alert('Don\'t beat yourself up about it, ' + user + ' :-) On to the final question!');
   }
 }
-
-if (numTries === 3) {
-  alert('Don\'t beat yourself up about it, ' + user + ' :-) On to the final question!');
-}
+guessNumber();
 
 //Question #7 - Guess one of my favorite countries to visit
 var answer7 = prompt('You\'ve made it to the final question, ' + user + '. Ready? Can you guess one of the many countries I\'ve explored?');
