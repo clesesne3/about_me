@@ -76,16 +76,20 @@ function askProfession(){
   }
 }
 askProfession();
+
+function askFunFact(){
 // Question #5 - Fun or inconspicuous fact about me
-var answer5 = prompt('Hey ' + user + '! Did I ever play keyboard in a band? (Yes or No)').toLowerCase();
-console.log(user + ' answered ' + answer5 + ' for Question 5');
-if (answer5 === 'yes') {
-  userPoints++;
-  alert('That\'s right ' + user + '! Nice job! You currently have ' + userPoints + ' points.');
+  var answer5 = prompt('Hey ' + user + '! Did I ever play keyboard in a band? (Yes or No)').toLowerCase();
+  console.log(user + ' answered ' + answer5 + ' for Question 5');
+  if (answer5 === 'yes') {
+    userPoints++;
+    alert('That\'s right ' + user + '! Nice job! You currently have ' + userPoints + ' points.');
+  }
+  else {
+    alert('Sorry ' + user + ', that\'s wrong. Great try though! You scored a total of ' + userPoints + ' points.');
+  }
 }
-else {
-  alert('Sorry ' + user + ', that\'s wrong. Great try though! You scored a total of ' + userPoints + ' points.');
-}
+askFunFact();
 
 //Question #6 - Guess the number I am thinking of!(Generate random number; user will have four attempts)
 var guessNum = Math.floor((Math.random() * 5) + 1); // creates random integer between 1 and 5 inclusively
