@@ -107,7 +107,7 @@ if (numTries === 3) {
 }
 
 //Question #7 - Guess one of my favorite countries to visit
-var answer7 = prompt('You\'ve made it to the final question, ' + user + '. Ready? Can you guess one of the many countries I\'ve explored? (Don\'t forget, countries are proper nouns...be sure to capitalize that first letter!)');
+var answer7 = prompt('You\'ve made it to the final question, ' + user + '. Ready? Can you guess one of the many countries I\'ve explored?');
 console.log(user + ' answered ' + answer7 + ' for Question 7');
 var countryArray = ['South Africa', 'China', 'Jamaica', 'Dubai', 'France', 'Germany', 'England', 'Luxembourg'];
 var numAttempts = 0; // initialize counter for number of user guesses
@@ -117,7 +117,8 @@ var guessCorrect = false;
 while(numAttempts < 5) {
   // loop through array of countries to check user's answer against all array items
   for (var i = 0; i < countryArray.length; i++) {
-    if (answer7 === countryArray[i]) {
+    // convert user's guess to lower case
+    if (answer7.toLowerCase() === countryArray[i].toLowerCase()) {
       userPoints++;
       alert('Awesome, you got it, ' + user + '! ' + answer7 + ' is an amazing place!');
       alert('You scored ' + userPoints + ' out of 7 points, ' + user + '!');
