@@ -20,17 +20,20 @@ function funcQuestion0(){
   }
 }
 funcQuestion0();
-// Question #1 - Where was I born?
-var answer1 = prompt('Alright ' + user + ', first question: Was I born in Washington, DC? (Yes or No)').toLowerCase();
-console.log(user + ' answered ' + answer1 + ' for Question 1');
-if (answer1 === 'yes') {
-  userPoints ++;
-  alert('That\'s right, ' + user + '! You now have ' + userPoints + ' point.');
-}
-else {
-  alert('Oooh, sorry ' + user + ', that\'s incorrect! You still have ' + userPoints + ' points, but keep going!');
-}
 
+function askBirthPlace(){
+// Question #1 - Where was I born?
+  var answer1 = prompt('Alright ' + user + ', first question: Was I born in Washington, DC? (Yes or No)').toLowerCase();
+  console.log(user + ' answered ' + answer1 + ' for Question 1');
+  if (answer1 === 'yes') {
+    userPoints ++;
+    alert('That\'s right, ' + user + '! You now have ' + userPoints + ' point.');
+  }
+  else {
+    alert('Oooh, sorry ' + user + ', that\'s incorrect! You still have ' + userPoints + ' points, but keep going!');
+  }
+}
+askBirthPlace();
 // Question #2 - How many countries/places have I visited?
 var answer2 = prompt('Okay, second question ' + user + '. Have I traveled to more than 10 countries? (Yes or No)').toLowerCase();
 console.log(user + ' answered ' + answer2 + ' for Question 2');
