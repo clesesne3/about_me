@@ -1,9 +1,9 @@
 'use strict';
 
-// create & initialize variable to track user points
+// initialize variable to track user points; ; 'userPoints'is GLOBAL
 var userPoints = 0;
 
-// greet user and ask for their name
+// greet user and ask for their name; 'user' is GLOBAL
 var user = prompt('Welcome to my profile! What\'s your name?');
 console.log('The user\'s name is ' + user);
 alert('Hi, ' + user + '! I\'m glad you\'re here to checkout my page!');
@@ -63,7 +63,7 @@ else {
 }
 
 // Question #5 - Fun or inconspicuous fact about me
-var answer5 = prompt('Hey ' + user + '! Did I ever play keyboard in a band? (Yes or No)').toLowerCase();
+var answer5 = prompt('Hey ' + user + ', did I ever play keyboard in a band? (Yes or No)').toLowerCase();
 console.log(user + ' answered ' + answer5 + ' for Question 5');
 if (answer5 === 'yes') {
   userPoints++;
@@ -94,10 +94,17 @@ while (numTries < 3) {
     break;
   }
 
-  else {
+  else if (answer6 <= guessNum) {
     numTries++;
     var remainingTries = maxTries - numTries;
-    alert('Nope, guess again ' + user + '! You still have ' + remainingTries + ' left.');
+    alert('Nope, too low ' + user + '! You still have ' + remainingTries + ' left.');
+    answer6 = prompt('Number between 1 and 5? (Enter integer between 1 and 5):\n Tries left: ' + remainingTries);
+  }
+
+  else if (answer6 >= guessNum) {
+    numTries++;
+    var remainingTries = maxTries - numTries;
+    alert('Nope, too high ' + user + '! You still have ' + remainingTries + ' left.');
     answer6 = prompt('Number between 1 and 5? (Enter integer between 1 and 5):\n Tries left: ' + remainingTries);
   }
 }

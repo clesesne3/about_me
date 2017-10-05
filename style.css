@@ -17,16 +17,24 @@ header {
 }
 
 h1 {
-  text-align: left;
+  text-align: center;
   font-weight: normal;
   font-size: 48px;
-  font-style: italic;
-  font-family: 'Raleway';
+  font-family: 'Oxygen';
   text-shadow: 2px 2px gray;
   color: #FFF;
   z-index: 100;
-  border: 1px double #FFF;
-  border-radius: 10px;
+  border-top: 2px double #FFF;
+  border-bottom: 2px double #FFF;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1:hover {
+  color: Navy;
 }
 
 h3 {
@@ -36,14 +44,14 @@ h3 {
 }
 
 article {
-  border: 1px solid #FFF;
+  border: 3px solid Navy;
   margin-left: auto;
-  /*margin-right: auto;*/
   margin-top: 2%;
   margin-bottom: 2%;
   width: 32%;
   font-family: 'Roboto';
-  color: #FFF;
+  color: Navy; /*#FFF;*/
+  background-color: LightGray/*Navy;*/
 }
 
 article p {
@@ -51,11 +59,12 @@ article p {
 }
 
 .bio {
-  width: 30%; /* reduces width of article element with 'bio' class */
+  width: 32%; /* reduces width of article element with 'bio' class */
 }
 
-#bio_p {
-  text-align: center; /* centers paragraph text*/
+.bio p {
+  text-align: left;
+  /*text-indent: 5%;*/
   padding: 2%;
 }
 
@@ -66,6 +75,17 @@ article p {
 ul {
   margin: auto; /* centers list within section and page */
   width: 80%; /* width of list as a percentage of article*/
+}
+
+ol {
+  margin: auto; /* centers list within section and page */
+  width: 20%; /* width of list as a percentage of article*/
+  padding: 2%;
+  text-align: center;
+}
+
+#topTen {
+  text-decoration: underline;
 }
 
 footer {
