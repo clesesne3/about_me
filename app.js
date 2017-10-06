@@ -104,16 +104,23 @@ function guessNumber(){
 
   // give user 3 attempts to guess number
   while (numTries < 3) {
-    if (answer6 === guessNum) {
+    console.log('Arthur\'s console.log, at top of while loop, guessNum, answer6, numTries ' + guessNum + ' ' + answer6 + ' ' + numTries);
+    if (answer6 == guessNum) {
       userPoints++;
       alert('Wow! Way to go, ' + user + '! You read my mind! You have ' + userPoints + ' points.');
+      console.log('About to break.');
       break;
     }
 
-    else {
+    else if (answer6 < guessNum) {
       numTries++;
       var remainingTries = maxTries - numTries;
-      alert('Nope, guess again ' + user + '! You still have ' + remainingTries + ' left.');
+      alert('Nope, too low ' + user + '! You still have ' + remainingTries + ' left.');
+      answer6 = prompt('Number between 1 and 5? (Enter integer between 1 and 5):\n Tries left: ' + remainingTries);
+    }
+    else if (answer6 > guessNum){
+      numTries++;
+      alert('Nope, too high ' + user + '! You still have ' + remainingTries + ' left.');
       answer6 = prompt('Number between 1 and 5? (Enter integer between 1 and 5):\n Tries left: ' + remainingTries);
     }
   }
