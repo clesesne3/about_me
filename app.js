@@ -75,20 +75,21 @@ function askProfession(){
 askProfession();
 
 function askFunFact(){
-// Question #5 - Fun or inconspicuous fact about me
-var answer5 = prompt('Hey ' + user + ', did I ever play keyboard in a band? (Yes or No)').toLowerCase();
-console.log(user + ' answered ' + answer5 + ' for Question 5');
-if (answer5 === 'yes') {
-  userPoints++;
-  alert('That\'s right ' + user + '! Nice job! You currently have ' + userPoints + ' points.');
-}
-else {
-  alert('Sorry ' + user + ', that\'s wrong. Great try though! You scored a total of ' + userPoints + ' points.');
+  // Question #5 - Fun or inconspicuous fact about me
+  var answer5 = prompt('Hey ' + user + ', did I ever play keyboard in a band? (Yes or No)').toLowerCase();
+  console.log(user + ' answered ' + answer5 + ' for Question 5');
+  if (answer5 === 'yes') {
+    userPoints++;
+    alert('That\'s right ' + user + '! Nice job! You currently have ' + userPoints + ' points.');
+  }
+  else {
+    alert('Sorry ' + user + ', that\'s wrong. Great try though! You scored a total of ' + userPoints + ' points.');
+  }
 }
 askFunFact();
 
 function guessNumber(){
-//Question #6 - Guess the number I am thinking of!(Generate random number; user will have four attempts)
+  //Question #6 - Guess the number I am thinking of!(Generate random number; user will have four attempts)
   var guessNum = Math.floor((Math.random() * 5) + 1); // creates random integer between 1 and 5 inclusively
   var answer6 = parseInt(prompt('Okay ' + user + ', I\'m thinking of a number between 1 and 5...can you guess which number? (Enter integer between 1 and 5)')); //converts user's number response to an integer
 
@@ -96,33 +97,6 @@ function guessNumber(){
   var numTries = 0; //initialize counter for number of user guesses
   var maxTries = 4; //set maximum number of user guesses
 
-<<<<<<< HEAD
-// user must enter an integer to continue guessing
-while (isNaN(parseInt(answer6))) {
-  alert('You must enter an integer!');
-}
-
-// give user 3 attempts to guess number
-while (numTries < 3) {
-  if (answer6 == guessNum) {
-    userPoints++;
-    alert('Wow! Way to go, ' + user + '! You read my mind! You have ' + userPoints + ' points.');
-    break;
-  }
-
-  else if (answer6 < guessNum) {
-    numTries++;
-    var remainingTries = maxTries - numTries;
-    alert('Nope, too low ' + user + '! You still have ' + remainingTries + ' left.');
-    answer6 = prompt('Number between 1 and 5? (Enter integer between 1 and 5):\n Tries left: ' + remainingTries);
-  }
-
-  else if (answer6 > guessNum) {
-    numTries++;
-    var remainingTries = maxTries - numTries;
-    alert('Nope, too high ' + user + '! You still have ' + remainingTries + ' left.');
-    answer6 = prompt('Number between 1 and 5? (Enter integer between 1 and 5):\n Tries left: ' + remainingTries);
-=======
   // user must enter an integer to continue guessing
   while (isNaN(parseInt(answer6))) {
     alert('You must enter an integer!');
@@ -130,11 +104,9 @@ while (numTries < 3) {
 
   // give user 3 attempts to guess number
   while (numTries < 3) {
-    console.log('Arthur\'s console.log, at top of while loop, guessNum, answer6, numTries ' + guessNum + ' ' + answer6 + ' ' + numTries);
     if (answer6 == guessNum) {
       userPoints++;
       alert('Wow! Way to go, ' + user + '! You read my mind! You have ' + userPoints + ' points.');
-      console.log('About to break.');
       break;
     }
 
@@ -144,7 +116,8 @@ while (numTries < 3) {
       alert('Nope, too low ' + user + '! You still have ' + remainingTries + ' left.');
       answer6 = prompt('Number between 1 and 5? (Enter integer between 1 and 5):\n Tries left: ' + remainingTries);
     }
-    else if (answer6 > guessNum){
+
+    else if (answer6 > guessNum) {
       numTries++;
       var remainingTries = maxTries - numTries;
       alert('Nope, too high ' + user + '! You still have ' + remainingTries + ' left.');
@@ -154,7 +127,6 @@ while (numTries < 3) {
 
   if (numTries === 3) {
     alert('Don\'t beat yourself up about it, ' + user + ' :-) On to the final question!');
->>>>>>> e45b11481ba91832b1c8bbbf5a6095253250f974
   }
 }
 guessNumber();
