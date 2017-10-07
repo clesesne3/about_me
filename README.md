@@ -3,4 +3,4 @@
 Chris' Guessing Game was Pair-Programmed by:
 
 Driver Arthur Allen
-Navigator: Christoperh Lesesne
+Navigator: Christopher Lesesne
