@@ -88,20 +88,20 @@ while (isNaN(parseInt(answer6))) {
 
 // give user 3 attempts to guess number
 while (numTries < 3) {
-  if (answer6 === guessNum) {
+  if (answer6 == guessNum) {
     userPoints++;
     alert('Wow! Way to go, ' + user + '! You read my mind! You have ' + userPoints + ' points.');
     break;
   }
 
-  else if (answer6 <= guessNum) {
+  else if (answer6 < guessNum) {
     numTries++;
     var remainingTries = maxTries - numTries;
     alert('Nope, too low ' + user + '! You still have ' + remainingTries + ' left.');
     answer6 = prompt('Number between 1 and 5? (Enter integer between 1 and 5):\n Tries left: ' + remainingTries);
   }
 
-  else if (answer6 >= guessNum) {
+  else if (answer6 > guessNum) {
     numTries++;
     var remainingTries = maxTries - numTries;
     alert('Nope, too high ' + user + '! You still have ' + remainingTries + ' left.');
