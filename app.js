@@ -100,6 +100,7 @@ function guessNumber(){
   // user must enter an integer to continue guessing
   while (isNaN(parseInt(answer6))) {
     alert('You must enter an integer!');
+    answer6 = prompt('Number between 1 and 5? (Enter integer between 1 and 5):');
   }
 
   // give user 3 attempts to guess number
